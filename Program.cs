@@ -1,4 +1,10 @@
 
+using Microsoft.EntityFrameworkCore;
+using WebApplication2.Data;
+using WebApplication2.Repository.AuthRepository;
+using WebApplication2.Repository.EmailRepository;
+using WebApplication2.Repository.SmsRepository;
+
 namespace WebApplication2
 {
     public class Program
@@ -9,7 +15,15 @@ namespace WebApplication2
 
             // Add services to the container.
 
+            // Add DbContext
+            builder.Services.AddDbContext<UserDbContext>(options =>
+                options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
             builder.Services.AddControllers();
+            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+            builder.Services.AddScoped<IEmailService, EmailService>();
+            builder.Services.AddScoped<IAuthService, AuthService>();
+            builder.Services.AddHttpClient<ISmsService, SmsService>();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
