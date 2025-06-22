@@ -1,7 +1,7 @@
-﻿using WebApplication2.Model;
+﻿using AgriAuth.Model;
 using Microsoft.EntityFrameworkCore;
 
-namespace WebApplication2.Data
+namespace AgriAuth.Data
 {
     public class UserDbContext : DbContext
     {

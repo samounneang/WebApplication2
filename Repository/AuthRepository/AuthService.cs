@@ -1,13 +1,13 @@
-﻿using WebApplication2.Data;
-using WebApplication2.DTO;
-using WebApplication2.Enum;
-using WebApplication2.Model;
-using WebApplication2.Repository.EmailRepository;
-using WebApplication2.Repository.SmsRepository;
+﻿using AgriAuth.Data;
+using AgriAuth.DTO;
+using AgriAuth.Enum;
+using AgriAuth.Model;
+using AgriAuth.Repository.EmailRepository;
+using AgriAuth.Repository.SmsRepository;
 using Microsoft.EntityFrameworkCore;
 using System;
 
-namespace WebApplication2.Repository.AuthRepository
+namespace AgriAuth.Repository.AuthRepository
 {
     public class AuthService(UserDbContext context, IEmailService emailService, ISmsService smsService) : IAuthService
     {

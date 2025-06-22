@@ -1,4 +1,4 @@
-﻿namespace WebApplication2.Model
+﻿namespace AgriAuth.Model
 {
     public class FailedUser
     {

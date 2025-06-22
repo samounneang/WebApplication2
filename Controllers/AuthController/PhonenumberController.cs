@@ -1,9 +1,9 @@
-﻿using WebApplication2.DTO;
-using WebApplication2.Repository.AuthRepository;
+﻿using AgriAuth.DTO;
+using AgriAuth.Repository.AuthRepository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebApplication2.Controllers.AuthController
+namespace AgriAuth.Controllers.AuthController
 {
     [Route("api/[controller]")]
     [ApiController]

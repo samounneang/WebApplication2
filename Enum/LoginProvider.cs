@@ -1,4 +1,4 @@
-﻿namespace WebApplication2.Enum
+﻿namespace AgriAuth.Enum
 {
     public enum LoginProvider
     {

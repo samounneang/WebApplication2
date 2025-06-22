@@ -1,6 +1,6 @@
-@WebApplication2_HostAddress = https://localhost:32777
+@AgriAuth_HostAddress = https://localhost:32777
 
-GET {{WebApplication2_HostAddress}}/weatherforecast/
+GET {{AgriAuth_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###

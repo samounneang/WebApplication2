@@ -1,6 +1,6 @@
-﻿using WebApplication2.DTO;
+﻿using AgriAuth.DTO;
 
-namespace WebApplication2.Repository.EmailRepository
+namespace AgriAuth.Repository.EmailRepository
 {
     public interface IEmailService
     {

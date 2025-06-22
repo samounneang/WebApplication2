@@ -4,7 +4,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
-namespace WebApplication2.Migrations
+namespace AgriAuth.Migrations
 {
     /// <inheritdoc />
     public partial class Init001 : Migration

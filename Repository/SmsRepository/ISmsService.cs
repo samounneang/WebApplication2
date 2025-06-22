@@ -1,6 +1,6 @@
-﻿using WebApplication2.DTO;
+﻿using AgriAuth.DTO;
 
-namespace WebApplication2.Repository.SmsRepository
+namespace AgriAuth.Repository.SmsRepository
 {
     public interface ISmsService
     {

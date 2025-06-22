@@ -1,4 +1,4 @@
-﻿namespace WebApplication2.DTO
+﻿namespace AgriAuth.DTO
 {
     public class SmsDto
     {
