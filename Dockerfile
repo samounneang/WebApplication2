@@ -1,31 +1,31 @@
-# Base runtime image
+# Base image for runtime
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 USER $APP_UID
 WORKDIR /app
 EXPOSE 8080
 EXPOSE 8081
 
-# Build stage
+# Build image
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 
-# Copy project and restore
+# Copy and restore project
 COPY AgriAuth.csproj ./
 RUN dotnet restore "AgriAuth.csproj"
 
-# Copy the rest of the source code
+# Copy all files
 COPY . .
 
-# Build the project
-RUN dotnet build "AgriAuth.csproj" -c $BUILD_CONFIGURATION -o /app/build
+# Diagnostic + Build
+RUN ls -la && pwd && dotnet build "AgriAuth.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
-# Publish stage
+# Publish image
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
 RUN dotnet publish "AgriAuth.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
-# Final runtime stage
+# Final runtime image
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
