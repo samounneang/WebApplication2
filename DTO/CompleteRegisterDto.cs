@@ -1,6 +1,6 @@
-﻿using WebApplication2.Enum;
+﻿using AgriAuth.Enum;
 
-namespace WebApplication2.DTO
+namespace AgriAuth.DTO
 {
     public class CompleteRegisterDto
     {

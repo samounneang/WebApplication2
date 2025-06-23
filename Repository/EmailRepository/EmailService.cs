@@ -1,8 +1,8 @@
-﻿using WebApplication2.DTO;
+﻿using AgriAuth.DTO;
 using System.Net.Mail;
 using System.Net;
 
-namespace WebApplication2.Repository.EmailRepository
+namespace AgriAuth.Repository.EmailRepository
 {
     public class EmailService : IEmailService
     {

@@ -1,7 +1,7 @@
-﻿using WebApplication2.Repository.SmsRepository;
+﻿using AgriAuth.Repository.SmsRepository;
 using System.Text.Json;
 using System.Text;
-using WebApplication2.DTO;
+using AgriAuth.DTO;
 
 public class SmsService : ISmsService
 {

@@ -1,11 +1,11 @@
 
 using Microsoft.EntityFrameworkCore;
-using WebApplication2.Data;
-using WebApplication2.Repository.AuthRepository;
-using WebApplication2.Repository.EmailRepository;
-using WebApplication2.Repository.SmsRepository;
+using AgriAuth.Data;
+using AgriAuth.Repository.AuthRepository;
+using AgriAuth.Repository.EmailRepository;
+using AgriAuth.Repository.SmsRepository;
 
-namespace WebApplication2
+namespace AgriAuth
 {
     public class Program
     {
