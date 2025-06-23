@@ -20,7 +20,7 @@ public class SmsService : ISmsService
     {
         var requestPayload = new
         {
-            sender = "OaktreeUAT", // Use a custom sender name
+            sender = "PlasGateUAT", // Use a custom sender name
             to = smsDto.to,
             content = smsDto.content
         };
